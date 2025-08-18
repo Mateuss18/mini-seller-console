@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import LeadsList from './components/LeadsList'
 // import LeadDetailPanel from './components/LeadDetailPanel'
 // import OpportunitiesTable from './components/OpportunitiesTable'
-import './App.css'
 
 function App() {
   const [leads, setLeads] = useState([]);
@@ -30,8 +29,11 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <LeadsList leadsData={leads}  />
+    <div className="bg-gray-100 min-h-screen py-10">
+      <main className="container mx-auto max-w-4xl bg-white p-8 rounded-lg shadow-lg">
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Mini Seller Console</h1>
+        <LeadsList leadsData={leads} />
+      </main>
     </div>
   )
 }
